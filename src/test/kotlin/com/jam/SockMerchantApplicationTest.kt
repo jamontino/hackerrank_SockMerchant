@@ -10,7 +10,6 @@ internal class SockMerchantApplicationTest {
     @BeforeEach
     internal fun setUp() {
         testSubject = SockMerchantApplication()
-
     }
 
     @Test
