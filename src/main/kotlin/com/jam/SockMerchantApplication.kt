@@ -1,9 +1,10 @@
 package com.jam
 
-class SockMerchantApplication(val args: Array<String>) {
+class SockMerchantApplication(private val args: Array<String>) {
 
     fun run() {
-        val service = SockMerchantService(SockMerchantUtil.getSockCount(args), SockMerchantUtil.getSockList(args))
+        val sockData = SockDataConverter.convert(args)
+        val service = SockMerchantService(sockData)
         val numberOfPairs = service.getNumberOfPairs()
         println(numberOfPairs)
     }
